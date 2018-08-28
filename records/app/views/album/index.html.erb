@@ -1,0 +1,18 @@
+<h1>Album#index</h1>
+<p>Find me in app/views/album/index.html.erb</p>
+<div class="album-container">
+<%@albums.each do|album| %>
+<div class="album">
+    <h3><%=album.title%></h3>
+    <p><%=album.artist%></p>
+    <p><%=album.release%></p>
+    <%= link_to 'View Album', album_path(album) %>
+    <%= link_to 'Edit
+Album', album_edit_path(album) %>
+</div>
+<%end%>
+<div class="new-album">
+<%= new_album_path%>
+
+</div>
+</div>
